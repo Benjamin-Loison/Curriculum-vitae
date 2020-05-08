@@ -1,0 +1,174 @@
+\documentclass{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{eurosym}
+\usepackage{babel}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=2cm]{geometry}
+\makeatletter
+\renewcommand{\maketitle}
+{
+	\bgroup\setlength{\parindent}{0pt}
+	\begin{flushleft}\textbf{\@author}\end{flushleft}
+	\begin{center}\huge\@title\end{center}
+}
+
+\begin{document}
+
+	\author{Benjamin Loison\\
+	
+		Né le 23 septembre 2000\\
+		Adresse 00000 Ville\\
+		06 XX XX XX XX\\
+	
+	adresse@mail.com}
+	\title{Curriculum Vitae\\ % \vspace*{2cm}
+	
+		\Large mai 2020\\
+	
+	\normalsize\textit{\\
+		\color{blue}Ce document utilise des liens hypertextes (URL)
+	}}
+	
+	\maketitle
+
+	%\vspace*{1cm}
+	\def\contentsname{\empty}
+	%\tableofcontents
+	%\clearpage
+
+		\section{Intérêt pour la recherche}
+
+			Je suis un étudiant de classe préparatoire aux grandes écoles particulièrement intéressé par l’informatique et ses mathématiques sous-jacentes. Les concepts de graphes, d’arbres, de logique, et la recherche de différentes approches pour réduire la complexité d’un algorithme, me passionnent. Ma forte motivation à poursuivre mon cursus au département informatique des ENS repose sur l’interaction fructueuse des mathématiques au service de l’informatique.%
+
+		\section{Compétences informatiques}
+  
+		\begin{enumerate}
+
+			\item Extrêmement familier (utilisation quotidienne) avec:\\
+				C++ (avec les bibliothèques SDL, OpenGL, OpenAL, Curl, OpenCV, NanoSVG, Cereal...), C, Java, Python, OCaml, PhP, \href{https://www.wolfram.com/language/elementary-introduction/2nd-ed/}{Wolfram} (Mathematica), HTML5, JavaScript, SQL, Casio BASIC, Texas Instrument BASIC, \LaTeX, Batch, Bash et Gallina (\href{https://fr.wikipedia.org/wiki/Coq_(logiciel)}{Coq}).
+			
+			\item Familier avec: CSS3, jQuery, AngularJS, Node.js, C\#, Ruby (+ on Rails), Objective-C, R, UML, Perl, Assembleur, Swift, OpenCL et Cuda.
+		
+			\item Utilisation quotidienne de Linux.\\
+			180 exercices faits sur France-IOI: \href{http://france-ioi.org/user/perso.php?sLogin=benjamin_loison}{benjamin\_loison}.\\
+			Intérêt particulier pour les vidéos d'informatique théorique de la chaîne YouTube \href{https://www.youtube.com/user/Computerphile}{computerphile}.
+
+		\end{enumerate}
+
+		\section{Principales réalisations}
+
+			Beaucoup des projets suivants sont disponibles sur \href{https://github.com/Benjamin-Loison?tab=repositories}{mon GitHub: https://github.com/Benjamin-Loison?tab=repositories}
+
+		\begin{enumerate}
+
+				\item Mon jeu vidéo \href{https://github.com/Benjamin-Loison/LemnosLife}{LemnosLife} codé de façon cross-plateforme en C++ (avec OpenGL, SDL, OpenAL, Cereal et NanoSVG):
+				
+					\newcommand{\tmp}[2]{#2}
+					
+					% 1
+					- Recherche et sélection d'algorithmes les plus pertinents pour résoudre des problèmes complexes (génération aléatoire de points dans un concave, calcul du volume d'une structure 3D à partir de son nuage de points...). % , détermination des quadrilatères pour afficher une route avec de beaux virages seulement à partir des couples de points définissant des segments de route... afin de travailler avec différents points de vue et de trouver l'algorithme le plus adéquat. Echanges avec d'autres développeurs du projet ou en ligne pour répondre à ces problématiques.
+				
+					% 2
+					- \tmp{https://github.com/Benjamin-Loison/LemnosLife/tree/master/LaTex/Theory}{Gestion de la physique et des modèles mathématiques pour les collisions, les avions de chasse, les armes, les frottements de l'air, les véhicules, la gravité et la sélection graphique.}
+				
+					% 3
+					- \tmp{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/LemnosLife/Map}{Gestion et affichage des données binaires compressées de 400 km² (île Lemnos en Grèce) du monde réel.}%, suite à de nombreux traitements et analyse.}
+					
+					% 4
+					- Utilisation d'une interface utilisateur au sein du programme pour modéliser des structures 3D.% et nombreuses autres menus pour permettre des interactions plus complexes.
+					
+					% 5
+					- Utilisation de l'algorithme de hachage bcrypt et de l'authentification à deux facteurs HOTP pour garantir une sécurité optimale sur l'authentification.
+					
+					% 6
+					- Utilisation d'un chiffrement Vigenère utilisant deux clés entrelassées stockées sur le client et le serveur afin de rendre difficile le vol de données du jeu.
+					
+					% 7
+					- Gestion d'un site web pour informer les utilisateurs.
+				
+					% 8
+					- Gestion de l'ensemble du projet avec un \tmp{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Panel}{panel pour programmer} fait par moi-même et \tmp{https://docs.google.com/document/d/1rnYh5uGzhmrSZ34OW5-3V3XZjxATDYzPypT43C2trjE}{d'un cahier des charges}.
+				
+					% 9
+					- Gestion du chat vocal avec le codec opus, du \tmp{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/LemnosLife/Render}{moteur graphique} et de \tmp{https://github.com/Benjamin-Loison/LemnosLife/blob/master/Client/Network/Main/client.h}{la partie réseau (TCP).}
+				
+					% 10
+					- \tmp{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Installation}{Utilisation d'un système d'installation et de mises à jours automatiques et optimisées.}
+
+					% 11
+					- \tmp{https://github.com/Benjamin-Loison/LemnosLife/tree/master/ServerBridge}{Utilisation d'un serveur relais hébergé chez OVH afin d'empêcher tout DDOS sur le serveur de jeu terminal hébergé à domicile.}
+					
+					%- Support pour les langues française, anglaise et allemande.
+
+				\item \href{https://github.com/Benjamin-Loison/C--projects/blob/master/main.cpp}{Expériences en cryptographie avec l'algorithme RSA} et \href{https://github.com/Benjamin-Loison/Lot-of-Java-projects/tree/master/Hash\%20password\%20database}{l'algorithme de cryptage symétrique Blowfish.}
+			
+				\item \href{https://github.com/Benjamin-Loison/AltisCraft.fr}{Extensions Minecraft: AltisCraft.fr} (plus de 40 000 lignes de code de Java et plus de 85 000 joueurs), nombreux \href{https://github.com/Benjamin-Loison/Lot-of-Java-projects/blob/master/Minecraft\%20mods\%20and\%20plugins.zip}{mods} et \href{https://github.com/Benjamin-Loison/Azziz-Plugin-MC-Mini-Games}{plugins}.
+			
+				\item Fractales:
+			
+				- \href{https://github.com/Benjamin-Loison/Koch-snowflake}{Le flocon de Koch avec explication de la démarche/code en 3 épisodes sur YouTube (voir GitHub)} (Casio/TI BASIC, Python et C++)
+			
+				- L'ensemble de Mandelbrot (Casio/\href{https://github.com/Benjamin-Loison/BASIC-algorithms-calculators-/tree/master/MANDELBR}{TI} BASIC et Python)
+				
+				- \href{https://github.com/Benjamin-Loison/Sierpinski-s-triangle}{Le triangle de Sierpinski (Python)}
+			
+				\item Automates cellulaires:
+			
+				- \href{https://github.com/Benjamin-Loison/Conway-game-of-life}{Le jeu de la vie de Conway} (Casio/TI BASIC, Python et C++)
+			
+				- \href{https://github.com/Benjamin-Loison/Langton-s-ant}{La fourmi de Langton (Python et C++)}
+			
+				\item \href{https://github.com/Benjamin-Loison/Travaux-Personnel-Encadr-s-TPE---BAC-}{Site internet pour mon Travail Personnel Encadré (TPE)} sur le Temps, codé à la main par moi-même pour exposer notre travail.
+
+		\end{enumerate}
+
+	\section{Formation}
+
+	\begin{enumerate}
+		
+		\item 2019-2020 \href{https://github.com/Benjamin-Loison/MPX}{Classe préparatoire en MP* (Fénelon, Paris 6\textsuperscript{e})}:
+
+			\item 2018-2019 \href{https://github.com/Benjamin-Loison/MPSI1}{Classe préparatoire en MPSI (Fénelon, Paris 6\textsuperscript{e})}:
+			
+			- \href{https://github.com/Benjamin-Loison/MPSI1/tree/master/TIPE}{Pour mon Travail d'Initiative Personnelle Encadré (TIPE) sur le thème "océan": une approche de comptage et de reconnaissance de poissons sur une image avec des réseaux de neurones (Python, OpenCV, C++, OpenCL). Utilisation de la théorie mathématique dans le cours en anglais "machine learning" sur \href{https://www.coursera.org/learn/machine-learning?}{Coursera.}}
+			
+				- \href{https://github.com/Benjamin-Loison/MPSI1/blob/master/Physic-chemistry.zip}{En physique-chimie: utilisation de \LaTeX\ pour tous les compte-rendus de travaux pratiques.}
+			
+				- \href{https://github.com/Benjamin-Loison/MPSI1/tree/master/Mathematics}{En mathématiques: utilisation de Mathematica pour vérifier des résultats.}
+		
+			\item 2017-2018 Baccalauréat série S, spécialité Mathématiques, mention Bien (Anglais, Allemand).
+
+			\item 2015-2016 Seconde générale avec \href{https://github.com/Benjamin-Loison/ISN-2-nde-French-educationnal-system-}{option Information et Sciences du Numérique (ISN) orientée en Python et en HTML5/CSS3.}
+		
+	\end{enumerate}
+
+	\section{Participations extérieures}
+
+		\begin{enumerate}
+			
+			\item Une semaine à l'écolé d'été de MathInFoLy avec utilisation de l'assistant de preuve Coq et \href{https://github.com/Benjamin-Loison/MathInFoLy19}{résolution de Picross avec un SAT solver} (Lyon, août 2019).
+			
+			\item Deux semaines à l'école d'été de Wolfram avec l'utilisation de Mathematica. (Oxford, juillet 2017)
+			
+			\item Pépinières de mathématiques de Première (Versailles, avril 2017).
+			
+			\item Olympiades académiques de mathématiques de Première (Versailles, mars 2017)
+			
+			\item BattleDev - 479\textsuperscript{ème}/2000 (novembre 2016) et 552\textsuperscript{ème}/4000 (novembre 2018).
+			
+			\item Demi-finale France-IOI Algoréa: 10\textsuperscript{ème}/2701, niveau seconde. (2016)
+
+		\end{enumerate}
+		
+		\section{Code source de ce Curriculum Vitae}
+	
+		\href{https://github.com/Benjamin-Loison/Curriculum-vitae/mai-2020.tex}{https://github.com/Benjamin-Loison/Curriculum-vitae/mai-2020.tex}
+	
+\end{document}
