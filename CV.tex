@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper,sans]{moderncv} % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\moderncvstyle{classic} % style options are 'casual' (default), 'classic'
+\moderncvcolor{blue} % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\nopagenumbers{}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+
+\usepackage{frenchle}
+\usepackage[left=1cm, right=1cm, top=0.7cm, bottom=1cm]{geometry}
+%\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{1.8cm} % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{3cm} % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{xpatch}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+\newcommand\score[2]{
+  \pgfmathsetmacro\pgfxa{#1 + 1}
+  \tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1.3pt, anchor=outer point 3]
+  \begin{tikzpicture}[baseline]
+    \foreach \i in {1, ..., #2} {
+      \pgfmathparse{\i<=#1 ? "yellow" : "gray"}
+      \edef\starcolor{\pgfmathresult}
+      \draw (\i*1.75ex, 0) node[name=star\i, scorestars, fill=\starcolor]  {};
+   }
+  \end{tikzpicture}
+}
+
+\name{Benjamin}{Loison}
+\address{Adresse}{Code postal Ville}{}
+\phone[mobile]{06 00 00 00 00}
+\phone[fixed]{01 00 00 00 00}
+\email{adresse@email.fr} % how disable email's color ?
+%\homepage{lemnoslife.com}
+\social[github]{Benjamin-Loison} % twitter, linkedin
+\extrainfo{Né le 23 septembre 2000}
+\photo[64pt][0.1pt]{picture} % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+\vspace*{-0.4cm}
+%\quote{Ce document utilise des liens hypertextes (URL)}
+
+
+\begin{document}
+
+\makecvtitle
+
+\vspace*{-1.2cm}
+
+{\footnotesize\color{blue}\textit{Ce document utilise des liens hypertextes (URL)}} %%%%%%%%%%%%%%%% ITALIC ? %%%%%%%%
+\newcommand*{\myHref}[2]{\href{#1}{\textit{#2}}} %%%%%%%%%%%%%%%%%%%%%%%% ITALIC ? %%%%%%%%%%%%%
+
+\vspace*{-0.3cm}
+
+\section{Formation}
+
+	\cventry{2019--2020}{CPGE \myHref{https://github.com/Benjamin-Loison/MPX}{MP*}, option informatique}{lycée Fénelon (Paris 6\textsuperscript{e})}{}{}{}
+	\cventry{2018--2019}{\mdseries CPGE \myHref{https://github.com/Benjamin-Loison/MPSI1}{MPSI}}{lycée Fénelon (Paris 6\textsuperscript{e})}{}{}{Travail d'Initiative Personnelle Encadré (\myHref{https://github.com/Benjamin-Loison/MPSI1/tree/master/TIPE}{TIPE}) sur le thème "océan": une approche de comptage et de reconnaissance de poissons sur une image avec des réseaux de neurones (Python, OpenCV, C++, OpenCL). Utilisation de la théorie mathématique "machine learning" en anglais en anglais sur \myHref{https://www.coursera.org/learn/machine-learning}{Coursera.}}%\\- \myHref{https://github.com/Benjamin-Loison/MPSI1/blob/master/Physic-chemistry.zip}{En physique-chimie: utilisation de \LaTeX\ pour tous les compte-rendus de travaux pratiques.}\\- \myHref{https://github.com/Benjamin-Loison/MPSI1/tree/master/Mathematics}{En mathématiques: utilisation de Mathematica pour vérifier des résultats.}}
+	\cventry{2017--2018}{\mdseries Baccalauréat série S, spécialité Mathématiques, mention Bien (Anglais, Allemand)}{}{}{}{}
+	\cventry{2015--2016}{\mdseries Seconde générale, option Information et Sciences du Numérique (\myHref{https://github.com/Benjamin-Loison/ISN-2-nde-French-educationnal-system-}{ISN}) orientée en Python et en HTML5/CSS3.}{}{}{}{}
+	%\cvitem{2016--2017}{\textbf{Seconde générale} avec \myHref{https://github.com/Benjamin-Loison/ISN-2-nde-French-educationnal-system-}{option Information et Sciences du Numérique (ISN) orientée en Python et en HTML5/CSS3.}}
+
+\section{Participations extérieures}
+\begin{compactitem}
+			
+			\item Une semaine à l'école d'été de MathInFoLy avec utilisation de l'assistant de preuve Coq et \myHref{https://github.com/Benjamin-Loison/MathInFoLy19}{résolution de Picross} avec un SAT solver (Lyon, août 2019).
+			
+			\item Deux semaines à l'école d'été de Wolfram avec l'utilisation de \myHref{https://github.com/Benjamin-Loison/Wolfram-Collision}{Mathematica}. (Oxford, juillet 2017)
+			
+			\item Pépinières de mathématiques de Première (Versailles, avril 2017).
+			
+			\item Olympiades académiques de mathématiques de Première (Versailles, mars 2017)
+			
+			\item Demi-finale France-IOI Algoréa: 10\textsuperscript{ème}/2701, niveau seconde. (2016)
+			
+			\item BattleDev - 479\textsuperscript{ème}/2000 (novembre 2016) et 552\textsuperscript{ème}/4000 (novembre 2018).
+
+		\end{compactitem}
+
+	\section{Principales réalisations}
+	%Beaucoup des projets suivants sont disponibles sur \myHref{https://github.com/Benjamin-Loison?tab=repositories}{mon GitHub: https://github.com/Benjamin-Loison?tab=repositories}
+	\begin{compactitem}
+		\item Mon jeu vidéo \myHref{https://github.com/Benjamin-Loison/LemnosLife}{LemnosLife} codé de façon cross-plateforme en C++ (avec OpenGL, SDL, OpenAL, Cereal et NanoSVG):
+		\begin{compactitem}
+			\item Recherche et sélection d'algorithmes les plus pertinents pour résoudre des problèmes complexes (\myHref{https://github.com/Benjamin-Loison/LemnosLife/blob/master/Client/Random/RandomPoint.cpp}{génération aléatoire de points dans un concave}, calcul du volume d'une structure 3D à partir de son nuage de points...).
+			\item Gestion de la physique et des \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/LaTex/Theory}{modèles mathématiques} pour les collisions, les avions de chasse, les \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/Guns/Engine}{armes}, les frottements de l'air, les \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/Vehicles}{véhicules}, la \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/Physics}{gravité} et la \myHref{https://github.com/Benjamin-Loison/LemnosLife/blob/master/Client/LemnosLife/Map/objects.cpp#L187}{sélection graphique}.
+			\item \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Scripts}{Gestion} et \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/LemnosLife/Map}{affichage} des données binaires compressées de 400 km² (île Lemnos en Grèce) du monde réel.
+			\item \myHref{https://www.youtube.com/playlist?list=PLiJOYdwXbxtZqneWzvr21YzEiTG-QiPKZ}{Chaîne YouTube}: vidéos de développement de LemnosLife.
+		\end{compactitem}
+		\item Extensions Minecraft: \myHref{https://github.com/Benjamin-Loison/AltisCraft.fr}{AltisCraft.fr} (plus de 40 000 lignes de code de Java et plus de 85 000 joueurs), nombreux \myHref{https://github.com/Benjamin-Loison/Lot-of-Java-projects/tree/master/Minecraft%20mods%20and%20plugins}{mods} et \myHref{https://github.com/Benjamin-Loison/Azziz-Plugin-MC-Mini-Games}{plugins}.
+		
+			\item Fractales:
+		
+			- Le \myHref{https://github.com/Benjamin-Loison/Koch-snowflake}{flocon de Koch} avec explication de la démarche/code en \myHref{https://www.youtube.com/watch?v=boiX1U-RyoE&list=PLiJOYdwXbxtbUuo2ggbXZUJj9NrFPddgl}{3 épisodes sur YouTube} (Casio/TI BASIC et Python) % no C++ ? :'(
+		
+			- L'\myHref{https://github.com/Benjamin-Loison/BASIC-algorithms-calculators-/tree/master/MANDELBR}{ensemble de Mandelbrot} (Casio/TI BASIC et Python)
+			
+			- Le \myHref{https://github.com/Benjamin-Loison/Sierpinski-s-triangle}{triangle de Sierpinski} (Python)% no C++ ? :'(
+		
+			\item Automates cellulaires:
+		
+			- Le \myHref{https://github.com/Benjamin-Loison/Conway-game-of-life}{jeu de la vie de Conway} (Casio/TI BASIC, Python et C++)
+		
+			- La \myHref{https://github.com/Benjamin-Loison/Langton-s-ant}{fourmi de Langton} (Python et C++)
+		
+		\item Expériences en cryptographie avec l'algorithme \myHref{https://github.com/Benjamin-Loison/C--projects/blob/master/main.cpp}{RSA} et l'algorithme de cryptage symétrique \myHref{https://github.com/Benjamin-Loison/Lot-of-Java-projects/tree/master/Hash\%20password\%20database}{Blowfish}.
+		
+		\item Site internet pour mon Travail Personnel Encadré (\myHref{https://benjamin-loison.github.io/Travaux-Personnel-Encadr-s-TPE---BAC-/}{TPE}) sur le Temps, codé à la main par moi-même pour exposer notre travail.
+		
+	\end{compactitem}
+
+%\section{Compétences informatiques}
+%\cvitemwithcomment{Language 1}{Skill level}{Comment}
+
+\section{Compétences informatiques}
+
+\setlength{\hintscolumnwidth}{1cm}
+\cvdoubleitem{\score{3}{3}}{C++, Java, Python, OCaml, PhP, \myHref{https://www.wolfram.com/language/elementary-introduction/2nd-ed/}{Wolfram} (Mathematica), HTML5, JavaScript, SQL, \LaTeX}{\score{2}{3}}{Bash, Batch, Gallina (\myHref{https://fr.wikipedia.org/wiki/Coq_(logiciel)}{Coq}), CSS3, Ruby, Objective-C, R, UML, Perl, Assembleur et OpenCL}
+
+%\section{Interests}
+%\cvitem{hobby 1}{Description}
+
+%\section{Extra 1}
+%\cvlistitem{Item 2. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+\end{document}
