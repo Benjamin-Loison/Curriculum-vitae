@@ -1,0 +1,125 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\usepackage[utf8]{inputenc}
+%\usepackage{paralist} 
+
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=1cm]{geometry}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+\newcommand\score[2]{
+  \pgfmathsetmacro\pgfxa{#1 + 1}
+  \tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw, inner sep=1.3pt, anchor=outer point 3]
+  \begin{tikzpicture}[baseline]
+    \foreach \i in {1, ..., #2} {
+      \pgfmathparse{\i<=#1 ? "yellow" : "gray"}
+      \edef\starcolor{\pgfmathresult}
+      \draw (\i*1.75ex, 0) node[name=star\i, scorestars, fill=\starcolor]  {};
+   }
+  \end{tikzpicture}
+}
+
+\name{Benjamin}{Loison}
+\address{No public address}{}
+\phone[mobile]{+33 6 00 00 00 00}
+\email{no.public@email.fr}
+\social[github]{Benjamin-Loison}
+\extrainfo{Born September 23, 2000\\Driver's license}
+\photo[64pt][0.1pt]{picture}
+
+\vspace*{-0.4cm}
+
+
+\begin{document}
+
+\makecvtitle
+
+\vspace*{-1.2cm}
+
+{\footnotesize\color{blue}\textit{This document uses hypertext links (URLs)}}
+\newcommand*{\myHref}[2]{\href{#1}{\textit{#2}}}
+
+\vspace*{-0.3cm}
+
+\section{Background}
+
+\setlength{\hintscolumnwidth}{1.8cm}
+
+	\cventry{2020--2021}{L3, IT department, Ecole Normale Supérieure}{}{}{}{}
+	\cventry{2019--2020}{\mdseries CPGE MP*, computer science option, lycée Fénelon (Paris 6\textsuperscript{e})}{}{}{}{}
+	% tipe réalisations
+	\cventry{2018--2019}{\mdseries CPGE MPSI, lycée Fénelon (Paris 6\textsuperscript{e})}{}{}{}{\myHref{https://github.com/Benjamin-Loison/MPSI1/tree/master/TIPE}{Personal initiative work supervised} about the topic "ocean": an approach to counting and recognizing fish on an image with neural networks (Python, OpenCV, C++, GPU programming). Use of "machine learning" mathematical theory in English on \myHref{https://www.coursera.org/learn/machine-learning}{Coursera.}}
+	\cventry{2017--2018}{\mdseries Baccalauréat série S, specialty Mathematics, with merit (English, German)}{}{}{}{}
+	\cventry{2015--2016}{\mdseries Seconde générale, \myHref{https://github.com/Benjamin-Loison/ISN-2-nde-French-educationnal-system}{computer science and digital science option} mainly using Python and HTML5/CSS3}{}{}{}{}
+
+\section{Outside interests}
+
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\cventry{November 2020}{\mdseries\myHref{https://battledev.blogdumoderateur.com/?utm_campaign=22h00_-_fin_de_la_BattleDev}{BattleDev - 218\textsuperscript{th}/4624}, 552\textsuperscript{th}/4000 (november 2018) and 479\textsuperscript{ème}/2000 (november 2016)}{}{}{}{}
+
+\cventry{2020-2021}{\mdseries Member of the algorithmic club of the ENS Paris-Saclay}{}{}{}{}
+
+\cventry{August 2019}{\mdseries One week at the summer school of \myHref{https://mathinfoly.org}{MathInFoLy} with the use of the proof assistant Coq and \myHref{https://github.com/Benjamin-Loison/MathInFoLy19}{Picross resolution} using a SAT solver (Lyon)}{}{}{}{}
+
+\cventry{July 2017}{\mdseries Two weeks at Wolfram's summer school with the use of \myHref{https://github.com/Benjamin-Loison/Wolfram-collisions}{Mathematica} (Oxford)}{}{}{}{}
+
+\cventry{April 2017}{\mdseries Premiere academic mathematics summer school (Versailles)}{}{}{}{}
+
+\cventry{March 2017}{\mdseries Premiere academic mathematics olympiads (Versailles)}{}{}{}{}
+
+\cventry{2016}{\mdseries Semi-finale France-IOI Algoréa: 10\textsuperscript{th}/2701, seconde level}{}{}{}{}
+
+	\section{Main achievements}
+	\begin{itemize}
+		\item My video game \myHref{https://github.com/Benjamin-Loison/LemnosLife}{LemnosLife} (more than 50 KLOC of C++) cross-platform coded (using OpenGL, SDL, OpenAL, Cereal and NanoSVG):
+		\begin{itemize}
+			\item Research and selection of the most relevant algorithms to solve complex problems (\myHref{https://github.com/Benjamin-Loison/LemnosLife/blob/master/Client/Random/RandomPoint.cpp}{random generation of points in a concave}, calculation of the volume of a 3D structure from its cloud of points...).
+			\item Management of physics and \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/LaTex/Theory}{mathematical models} for collisions, fighter aircraft, \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/Guns/Engine}{guns}, air friction, \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/Vehicles}{vehicles}, \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/Physics}{gravity} and \myHref{https://github.com/Benjamin-Loison/LemnosLife/blob/master/Client/LemnosLife/Map/objects.cpp#L207}{graphic selection}.
+			\item \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Scripts}{Management} and \myHref{https://github.com/Benjamin-Loison/LemnosLife/tree/master/Client/LemnosLife/Map}{display} of topographic data from 500 km² of the Greek island Lemnos.
+			\item \myHref{https://www.youtube.com/playlist?list=PLiJOYdwXbxtZqneWzvr21YzEiTG-QiPKZ}{YouTube channel}: LemnosLife development videos.
+		\end{itemize}
+		
+		\item Minecraft extensions: \myHref{https://github.com/Benjamin-Loison/AltisCraft.fr}{AltisCraft.fr} (more than 30 KLOC of Java and more than 85 000 players), many \href{https://github.com/Benjamin-Loison/Lot-of-Java-projects/tree/master/Minecraft%20mods%20and%20plugins}{\textit{mods}} and \myHref{https://github.com/Benjamin-Loison/Plugin-MC-Mini-Games}{plugins}.
+		
+			\item Fractals:
+		
+		\begin{itemize}
+			\item \myHref{https://github.com/Benjamin-Loison/Koch-snowflake}{Koch snowflake} with explanation of the approach with \myHref{https://www.youtube.com/watch?v=boiX1U-RyoE&list=PLiJOYdwXbxtbUuo2ggbXZUJj9NrFPddgl}{3 episodes on YouTube} (Casio/TI BASIC and Python)
+		
+			\item \myHref{https://github.com/Benjamin-Loison/Mandelbrot-set}{Mandelbrot set} (Casio/TI BASIC and Python)
+			
+			\item \myHref{https://github.com/Benjamin-Loison/Sierpinski-triangle}{Sierpinski triangle} (Python)
+			\end{itemize}
+		
+			\item Cellular automatons:
+		
+		\begin{itemize}
+			\item \myHref{https://github.com/Benjamin-Loison/Conway-game-of-life}{Conway's game of life} (Casio/TI BASIC, Python and C++)
+		
+			\item \myHref{https://github.com/Benjamin-Loison/Langton-s-ant}{Langton's ant} (Python and C++)
+			\end{itemize}
+		
+		\item Cryptography experiments with the algorithm \myHref{https://github.com/Benjamin-Loison/C--projects/blob/master/main.cpp}{RSA} and the hashing algorithm \myHref{https://github.com/Benjamin-Loison/Lot-of-Java-projects/tree/master/Hash\%20password\%20database}{Bcrypt}.
+		
+		\item \myHref{https://benjamin-loison.github.io/Travaux-Personnel-Encadres-TPE-BAC}{Website for my personal supervised work} about time, coded by hand.
+		
+	\end{itemize}
+
+\section{Computer skills}
+
+\setlength{\hintscolumnwidth}{1cm}
+\cvdoubleitem{\score{3}{3}}{C++, Java, Python, OCaml, \myHref{https://www.wolfram.com/language/elementary-introduction/2nd-ed/}{Wolfram} (Mathematica), PhP, SQL, HTML5, JavaScript, \LaTeX\ and Assembly}{\score{2}{3}}{Bash, Batch, Gallina (\myHref{https://fr.wikipedia.org/wiki/Coq_(logiciel)}{Coq}), CSS3, Ruby, Objective-C, R, UML, Perl and OpenCL}
+
+\end{document}
