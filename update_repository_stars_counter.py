@@ -1,12 +1,11 @@
 import requests
 
 def getContentFromURL(url):
-    return requests.get(url).text
+    return requests.get(url).json()
 
-youtubeOperationalApiGitHubRepositoryUrl = 'https://github.com/Benjamin-Loison/YouTube-operational-API/'
+youtubeOperationalApiGitHubRepositoryUrl = 'https://api.github.com/repos/Benjamin-Loison/YouTube-operational-API'
 
-content = getContentFromURL(youtubeOperationalApiGitHubRepositoryUrl)
-newStars = int(content.split('<span id="repo-stars-counter-star" aria-label="')[1].split(' users starred this repository"')[0])
+newStars = getContentFromURL(youtubeOperationalApiGitHubRepositoryUrl)['stargazers_count']
 
 prefix = 'YouTube operational API} ('
 suffix = '\hspace{'
