@@ -25,4 +25,4 @@ with open(filePath, 'w') as f:
     for linesIndex, line in enumerate(lines):
         f.write(line)
         if linesIndex < len(lines) - 1:
-            f.write("\n")
+            f.write('\n')
